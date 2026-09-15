@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/session.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/utils/home_digest.dart';
+import 'package:hermes_studio_mobile/core/models/session.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/utils/home_digest.dart';
 
 /// A fixed clock so window boundaries are asserted, not approximated.
 final _now = DateTime.utc(2026, 8, 27, 12, 0, 0);

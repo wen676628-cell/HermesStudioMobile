@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/session.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/utils/home_digest.dart';
-import 'package:hermes_android/core/widgets/hermes_components.dart';
-import 'package:hermes_android/core/widgets/home_pane.dart';
+import 'package:hermes_studio_mobile/core/models/session.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/utils/home_digest.dart';
+import 'package:hermes_studio_mobile/core/widgets/hermes_components.dart';
+import 'package:hermes_studio_mobile/core/widgets/home_pane.dart';
 
 /// A fixed clock so the window boundaries the digest owns stay asserted
 /// rather than approximated.

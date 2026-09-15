@@ -119,14 +119,14 @@ class VoiceComposerStartButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label: 'Start voice input',
+      label: '开始语音输入',
       button: true,
       enabled: enabled,
       excludeSemantics: true,
       child: IconButton.filledTonal(
         icon: const Icon(Icons.mic),
         onPressed: enabled ? onPressed : null,
-        tooltip: 'Speak to Hermes',
+        tooltip: '对 Hermes 说话',
         constraints: const BoxConstraints.tightFor(width: 48, height: 48),
       ),
     );

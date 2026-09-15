@@ -6,12 +6,12 @@ import 'package:flutter/semantics.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:hermes_android/core/models/attachment_draft.dart';
-import 'package:hermes_android/core/screens/chat_screen.dart';
-import 'package:hermes_android/core/services/connection_manager.dart';
-import 'package:hermes_android/core/services/ws_client.dart';
-import 'package:hermes_android/core/utils/chat_history_scroll.dart';
-import 'package:hermes_android/core/widgets/chat_end_affordance.dart';
+import 'package:hermes_studio_mobile/core/models/attachment_draft.dart';
+import 'package:hermes_studio_mobile/core/screens/chat_screen.dart';
+import 'package:hermes_studio_mobile/core/services/connection_manager.dart';
+import 'package:hermes_studio_mobile/core/services/ws_client.dart';
+import 'package:hermes_studio_mobile/core/utils/chat_history_scroll.dart';
+import 'package:hermes_studio_mobile/core/widgets/chat_end_affordance.dart';
 
 void main() {
   setUp(() {
@@ -139,30 +139,30 @@ void main() {
           );
 
           for (final label in const [
-            'Add attachment',
-            'Message',
-            'Start voice input',
-            'Spoken replies',
-            'Send message',
+            '添加附件',
+            '消息',
+            '开始语音输入',
+            '语音回复',
+            '发送消息',
           ]) {
             expect(find.bySemanticsLabel(label), findsOneWidget);
           }
           for (final tooltip in const [
-            'Attach image or file',
-            'Speak to Hermes',
-            'Send',
+            '附加图片或文件',
+            '对 Hermes 说话',
+            '发送',
           ]) {
             expect(tester.getSize(find.byTooltip(tooltip)), const Size(48, 48));
           }
           final messageField = tester.widget<TextField>(
             find.descendant(
-              of: find.bySemanticsLabel('Message'),
+              of: find.bySemanticsLabel('消息'),
               matching: find.byType(TextField),
             ),
           );
           expect(messageField.minLines, 1);
           expect(messageField.maxLines, 5);
-          expect(messageField.decoration?.hintText, 'Message Hermes…');
+          expect(messageField.decoration?.hintText, '发送消息给 Hermes…');
           expect(tester.takeException(), isNull);
         }
       },
@@ -244,7 +244,7 @@ void main() {
         sessionId: 'history-session',
       );
       await tester.enterText(find.byType(TextField), 'current question');
-      await tester.tap(find.byTooltip('Send'));
+      await tester.tap(find.byTooltip('发送'));
       await tester.pump();
       await client.postStarted.future;
 
@@ -281,14 +281,14 @@ void main() {
 
         controller.jumpTo(80);
         await tester.pump();
-        await tester.tap(find.byTooltip('Chat actions'));
+        await tester.tap(find.byTooltip('对话操作'));
         await tester.pumpAndSettle();
         await tester.tap(find.text('Refresh'));
         await tester.pumpAndSettle();
         expect(controller.position.pixels, closeTo(80, 0.01));
 
         await tester.enterText(find.byType(TextField), 'stay in history');
-        await tester.tap(find.byTooltip('Send'));
+        await tester.tap(find.byTooltip('发送'));
         await tester.pump();
         await client.postStarted.future;
 
@@ -339,7 +339,7 @@ void main() {
         final controller = _chatListController(tester);
 
         await tester.enterText(find.byType(TextField), 'follow this');
-        await tester.tap(find.byTooltip('Send'));
+        await tester.tap(find.byTooltip('发送'));
         await tester.pump();
         await client.postStarted.future;
         client.emitToken(List.filled(60, 'growing response').join('\n'));
@@ -375,7 +375,7 @@ void main() {
         await tester.pump();
 
         await tester.enterText(find.byType(TextField), 'remote response');
-        await tester.tap(find.byTooltip('Send'));
+        await tester.tap(find.byTooltip('发送'));
         await tester.pump();
         await remote.started.future;
 
@@ -456,7 +456,7 @@ void main() {
           serverFilePicker: () async => '/srv/project/README.md',
         );
 
-        await tester.tap(find.bySemanticsLabel('Add attachment'));
+        await tester.tap(find.bySemanticsLabel('添加附件'));
         await tester.pumpAndSettle();
         expect(find.text('Browse server files'), findsOneWidget);
 

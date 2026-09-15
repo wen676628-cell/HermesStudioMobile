@@ -2,14 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/services/chat_space_store.dart';
-import 'package:hermes_android/core/services/projects_gateway_client.dart';
-import 'package:hermes_android/core/services/projects_repository.dart';
-import 'package:hermes_android/core/services/ws_client.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/widgets/hermes_components.dart';
-import 'package:hermes_android/core/widgets/projects_pane.dart';
-import 'package:hermes_android/core/widgets/space_migration_preview.dart';
+import 'package:hermes_studio_mobile/core/services/chat_space_store.dart';
+import 'package:hermes_studio_mobile/core/services/projects_gateway_client.dart';
+import 'package:hermes_studio_mobile/core/services/projects_repository.dart';
+import 'package:hermes_studio_mobile/core/services/ws_client.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/widgets/hermes_components.dart';
+import 'package:hermes_studio_mobile/core/widgets/projects_pane.dart';
+import 'package:hermes_studio_mobile/core/widgets/space_migration_preview.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Map<String, dynamic> _projectJson({
@@ -238,7 +238,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Live'), findsOneWidget);
-    expect(find.text('Archived'), findsOneWidget);
+    expect(find.text('已归档'), findsOneWidget);
     expect(find.text('Retired'), findsOneWidget);
     expect(find.byKey(const Key('project-actions-p2')), findsOneWidget);
   });
@@ -257,7 +257,7 @@ void main() {
     await _pumpPane(tester, repository);
     await tester.pumpAndSettle();
 
-    expect(find.text('Archived'), findsOneWidget);
+    expect(find.text('已归档'), findsOneWidget);
     expect(find.text('Retired'), findsOneWidget);
     await tester.tap(find.byKey(const Key('project-actions-p2')));
     await tester.pumpAndSettle();

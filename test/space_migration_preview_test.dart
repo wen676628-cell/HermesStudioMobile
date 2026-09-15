@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/hermes_project.dart';
-import 'package:hermes_android/core/services/chat_space_store.dart';
-import 'package:hermes_android/core/services/projects_repository.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/widgets/space_migration_preview.dart';
+import 'package:hermes_studio_mobile/core/models/hermes_project.dart';
+import 'package:hermes_studio_mobile/core/services/chat_space_store.dart';
+import 'package:hermes_studio_mobile/core/services/projects_repository.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/widgets/space_migration_preview.dart';
 
 ChatSpace _space(String id, String name) =>
     ChatSpace(id: id, name: name, createdAt: 1750000000);

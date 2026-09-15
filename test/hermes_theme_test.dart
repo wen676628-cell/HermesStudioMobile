@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
 
 HermesTokens? _tokensFrom(ThemeData theme) => theme.extension<HermesTokens>();
 

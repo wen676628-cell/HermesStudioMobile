@@ -2880,7 +2880,7 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
             Row(
               children: [
                 Semantics(
-                  label: 'Add attachment',
+                  label: '添加附件',
                   button: true,
                   enabled: !_loading && !_streaming && !_sending,
                   excludeSemantics: true,
@@ -2898,7 +2898,7 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
                 ),
                 Expanded(
                   child: Semantics(
-                    label: 'Message',
+                    label: '消息',
                     textField: true,
                     child: TextField(
                       key: const Key('chat-message-composer'),
@@ -2931,8 +2931,8 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
                     onPressed: _startVoiceInput,
                   ),
                 Semantics(
-                  label: 'Spoken replies',
-                  value: _voiceReplyEnabled ? 'On' : 'Off',
+                  label: '语音回复',
+                  value: _voiceReplyEnabled ? '开' : '关',
                   toggled: _voiceReplyEnabled,
                   button: true,
                   excludeSemantics: true,
@@ -2947,8 +2947,8 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
                       }
                     },
                     tooltip: _voiceReplyEnabled
-                        ? 'Spoken replies on'
-                        : 'Spoken replies off',
+                        ? '语音回复已开启'
+                        : '语音回复已关闭',
                     constraints: const BoxConstraints.tightFor(
                       width: 48,
                       height: 48,

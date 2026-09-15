@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/gateway_insight.dart';
-import 'package:hermes_android/core/widgets/gateway_insight_card.dart';
+import 'package:hermes_studio_mobile/core/models/gateway_insight.dart';
+import 'package:hermes_studio_mobile/core/widgets/gateway_insight_card.dart';
 
 void main() {
   group('GatewayReasoningUpdate', () {

@@ -22,9 +22,9 @@ library;
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/services/projects_gateway_client.dart';
-import 'package:hermes_android/core/services/projects_repository.dart';
-import 'package:hermes_android/core/services/ws_client.dart';
+import 'package:hermes_studio_mobile/core/services/projects_gateway_client.dart';
+import 'package:hermes_studio_mobile/core/services/projects_repository.dart';
+import 'package:hermes_studio_mobile/core/services/ws_client.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Map<String, dynamic> _ok(Map<String, dynamic> result) => {

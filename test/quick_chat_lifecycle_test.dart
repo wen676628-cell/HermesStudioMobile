@@ -15,15 +15,15 @@ library;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/connection.dart';
-import 'package:hermes_android/core/models/session.dart';
-import 'package:hermes_android/core/screens/workspace_screen.dart';
-import 'package:hermes_android/core/services/projects_gateway_client.dart';
-import 'package:hermes_android/core/services/projects_repository.dart';
-import 'package:hermes_android/core/services/quick_chat_store.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/utils/home_digest.dart';
-import 'package:hermes_android/core/utils/new_chat_options.dart';
+import 'package:hermes_studio_mobile/core/models/connection.dart';
+import 'package:hermes_studio_mobile/core/models/session.dart';
+import 'package:hermes_studio_mobile/core/screens/workspace_screen.dart';
+import 'package:hermes_studio_mobile/core/services/projects_gateway_client.dart';
+import 'package:hermes_studio_mobile/core/services/projects_repository.dart';
+import 'package:hermes_studio_mobile/core/services/quick_chat_store.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/utils/home_digest.dart';
+import 'package:hermes_studio_mobile/core/utils/new_chat_options.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final _now = DateTime.utc(2026, 8, 29, 12);

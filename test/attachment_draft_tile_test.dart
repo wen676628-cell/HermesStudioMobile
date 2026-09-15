@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/attachment_draft.dart';
-import 'package:hermes_android/core/services/attachment_draft_service.dart';
-import 'package:hermes_android/core/widgets/attachment_draft_tile.dart';
+import 'package:hermes_studio_mobile/core/models/attachment_draft.dart';
+import 'package:hermes_studio_mobile/core/services/attachment_draft_service.dart';
+import 'package:hermes_studio_mobile/core/widgets/attachment_draft_tile.dart';
 
 void main() {
   testWidgets(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/gateway_activity.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/widgets/gateway_activity_card.dart';
+import 'package:hermes_studio_mobile/core/models/gateway_activity.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/widgets/gateway_activity_card.dart';
 
 Future<void> _pump(
   WidgetTester tester,
@@ -47,7 +47,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Build finished'), findsOneWidget);
-    expect(find.text('Completed in 4.2 s'), findsOneWidget);
+    expect(find.text('用时 4.2 s 完成'), findsOneWidget);
   });
 
   testWidgets('running activity opens automatically', (tester) async {
@@ -78,7 +78,7 @@ void main() {
     expect(find.text('1 failed • 1 total'), findsOneWidget);
     await tester.tap(find.text('工具活动'));
     await tester.pumpAndSettle();
-    expect(find.text('Failed after 2.0 s'), findsOneWidget);
+    expect(find.text('用时 2.0 s 后失败'), findsOneWidget);
   });
 
   testWidgets('survives large text without overflow', (tester) async {

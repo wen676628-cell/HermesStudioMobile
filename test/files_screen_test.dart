@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/screens/files_screen.dart';
-import 'package:hermes_android/core/services/remote_files_client.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/screens/files_screen.dart';
+import 'package:hermes_studio_mobile/core/services/remote_files_client.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
 
 class _FakeFilesDataSource implements RemoteFilesDataSource {
   Object? listError;

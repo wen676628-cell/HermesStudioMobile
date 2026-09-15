@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/services/quick_chat_store.dart';
-import 'package:hermes_android/core/utils/new_chat_options.dart';
+import 'package:hermes_studio_mobile/core/services/quick_chat_store.dart';
+import 'package:hermes_studio_mobile/core/utils/new_chat_options.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

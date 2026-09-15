@@ -5,7 +5,7 @@
 /// caller's degradation path is assertable.
 library;
 
-import 'package:hermes_android/core/services/gateway_turn_journal.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_journal.dart';
 
 class MemoryTurnJournalStore implements GatewayTurnJournalStore {
   String? value;

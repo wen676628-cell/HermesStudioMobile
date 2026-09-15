@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/utils/activity_feed.dart';
-import 'package:hermes_android/core/widgets/activity_pane.dart';
-import 'package:hermes_android/core/widgets/hermes_components.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/utils/activity_feed.dart';
+import 'package:hermes_studio_mobile/core/widgets/activity_pane.dart';
+import 'package:hermes_studio_mobile/core/widgets/hermes_components.dart';
 
 final _now = DateTime.utc(2026, 8, 28, 12, 0, 0);
 

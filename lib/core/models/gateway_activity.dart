@@ -39,23 +39,23 @@ class GatewayToolActivity {
   }
 
   String get statusLabel {
-    switch (phase) {
-      case GatewayToolActivityPhase.running:
-        return 'Running';
-      case GatewayToolActivityPhase.generating:
-        return 'Preparing';
-      case GatewayToolActivityPhase.progress:
-        return 'Working';
-      case GatewayToolActivityPhase.completed:
-        return durationSeconds == null
-            ? 'Completed'
-            : 'Completed in ${_formatDuration(durationSeconds!)}';
-      case GatewayToolActivityPhase.failed:
-        return durationSeconds == null
-            ? 'Failed'
-            : 'Failed after ${_formatDuration(durationSeconds!)}';
+      switch (phase) {
+        case GatewayToolActivityPhase.running:
+          return '运行中';
+        case GatewayToolActivityPhase.generating:
+          return '准备中';
+        case GatewayToolActivityPhase.progress:
+          return '工作中';
+        case GatewayToolActivityPhase.completed:
+          return durationSeconds == null
+              ? '完成'
+              : '用时 ${_formatDuration(durationSeconds!)} 完成';
+        case GatewayToolActivityPhase.failed:
+          return durationSeconds == null
+              ? '失败'
+              : '用时 ${_formatDuration(durationSeconds!)} 后失败';
+      }
     }
-  }
 
   static GatewayToolActivity? fromGatewayEvent(
     String eventType,

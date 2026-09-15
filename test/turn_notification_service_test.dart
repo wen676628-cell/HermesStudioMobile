@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/services/turn_notification_service.dart';
+import 'package:hermes_studio_mobile/core/services/turn_notification_service.dart';
 
 import 'support/recording_turn_notification_sink.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/services/chat_model_override_store.dart';
+import 'package:hermes_studio_mobile/core/services/chat_model_override_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

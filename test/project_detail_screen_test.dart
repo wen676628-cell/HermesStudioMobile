@@ -23,13 +23,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/hermes_project.dart';
-import 'package:hermes_android/core/models/project_sessions_tree.dart';
-import 'package:hermes_android/core/models/session.dart';
-import 'package:hermes_android/core/services/projects_repository.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/widgets/hermes_components.dart';
-import 'package:hermes_android/core/widgets/project_detail_screen.dart';
+import 'package:hermes_studio_mobile/core/models/hermes_project.dart';
+import 'package:hermes_studio_mobile/core/models/project_sessions_tree.dart';
+import 'package:hermes_studio_mobile/core/models/session.dart';
+import 'package:hermes_studio_mobile/core/services/projects_repository.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/widgets/hermes_components.dart';
+import 'package:hermes_studio_mobile/core/widgets/project_detail_screen.dart';
 
 Session _session({
   String id = 's1',
@@ -146,7 +146,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byType(EmptyState), findsOneWidget);
-    expect(find.textContaining('No chats'), findsOneWidget);
+    expect(find.textContaining('暂无对话'), findsOneWidget);
   });
 
   testWidgets('a failed first read is retryable', (tester) async {
@@ -251,7 +251,7 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    await tester.tap(find.text('Overview'));
+    await tester.tap(find.text('总览'));
     await tester.pumpAndSettle();
 
     // Deriving the count from the rows on screen would report 1.
@@ -311,7 +311,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(
-      find.textContaining('server-authoritative Assets index'),
+      find.textContaining('服务端资源索引'),
       findsOneWidget,
     );
   });
@@ -349,8 +349,8 @@ void main() {
     await tester.tap(find.text('任务'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Running'), findsOneWidget);
-    expect(find.text('Done'), findsOneWidget);
+    expect(find.text('运行中'), findsOneWidget);
+    expect(find.text('完成'), findsOneWidget);
   });
 
   testWidgets('opening a chat reports the session the server sent', (
@@ -406,7 +406,7 @@ void main() {
     await tester.tap(find.byKey(const Key('move-session-s-42')));
     await tester.pumpAndSettle();
     expect(find.text('Move conversation'), findsOneWidget);
-    expect(find.text('Unassigned'), findsOneWidget);
+    expect(find.text('未分配'), findsOneWidget);
     expect(find.text('ScriptHive'), findsOneWidget);
     // The current Project remains only in the app bar, never as a destination.
     expect(find.text('Hermes Android'), findsOneWidget);
@@ -451,10 +451,10 @@ void main() {
 
     await tester.tap(find.byTooltip('Project actions'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Archive project'));
+    await tester.tap(find.text('归档项目'));
     await tester.pumpAndSettle();
     expect(find.text('Archive Mobile?'), findsOneWidget);
-    await tester.tap(find.widgetWithText(FilledButton, 'Archive'));
+    await tester.tap(find.widgetWithText(FilledButton, '归档'));
     await tester.pumpAndSettle();
     expect(archives, 1);
   });
@@ -477,7 +477,7 @@ void main() {
 
     await tester.tap(find.byTooltip('Project actions'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Delete project'));
+    await tester.tap(find.text('删除项目'));
     await tester.pumpAndSettle();
 
     expect(find.text('Delete Hermes Android?'), findsOneWidget);
@@ -490,9 +490,9 @@ void main() {
 
     await tester.tap(find.byTooltip('Project actions'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Delete project'));
+    await tester.tap(find.text('删除项目'));
     await tester.pumpAndSettle();
-    await tester.tap(find.widgetWithText(TextButton, 'Delete'));
+    await tester.tap(find.widgetWithText(TextButton, '删除'));
     await tester.pumpAndSettle();
 
     expect(deletions, 1);
@@ -514,9 +514,9 @@ void main() {
 
     await tester.tap(find.byTooltip('Project actions'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Delete project'));
+    await tester.tap(find.text('删除项目'));
     await tester.pumpAndSettle();
-    await tester.tap(find.widgetWithText(TextButton, 'Delete'));
+    await tester.tap(find.widgetWithText(TextButton, '删除'));
     await tester.pumpAndSettle();
 
     expect(find.byType(ProjectDetailScreen), findsOneWidget);
@@ -631,7 +631,7 @@ void main() {
 
       expect(find.byKey(kProjectSearchFieldKey), findsNothing);
       expect(find.byType(EmptyState), findsOneWidget);
-      expect(find.textContaining('No chats'), findsOneWidget);
+      expect(find.textContaining('暂无对话'), findsOneWidget);
     });
 
     testWidgets('a query with no match shows a distinct no-match state', (
@@ -644,9 +644,9 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.byType(EmptyState), findsOneWidget);
-      expect(find.text('No matches'), findsOneWidget);
+      expect(find.text('无匹配项'), findsOneWidget);
       // Never the "empty project" claim: the chat may exist elsewhere.
-      expect(find.textContaining('No chats yet'), findsNothing);
+      expect(find.textContaining('暂无对话'), findsNothing);
     });
 
     testWidgets('a filtered row still opens its chat', (tester) async {

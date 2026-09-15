@@ -1,4 +1,4 @@
-import 'package:hermes_android/core/services/voice_composer_adapter.dart';
+import 'package:hermes_studio_mobile/core/services/voice_composer_adapter.dart';
 
 class FakeVoiceComposerAdapter implements VoiceComposerAdapter {
   final bool permissionGranted;

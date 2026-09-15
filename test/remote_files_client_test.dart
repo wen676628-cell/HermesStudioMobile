@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:hermes_android/core/services/connection_manager.dart';
-import 'package:hermes_android/core/services/remote_files_client.dart';
+import 'package:hermes_studio_mobile/core/services/connection_manager.dart';
+import 'package:hermes_studio_mobile/core/services/remote_files_client.dart';
 
 void main() {
   DashboardClient dashboardWith(

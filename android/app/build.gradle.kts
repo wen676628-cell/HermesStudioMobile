@@ -9,7 +9,7 @@ plugins {
 
 val keystoreProperties = Properties()
 val keystorePath = rootProject.projectDir.parentFile.resolve("key.properties")
-val minimumInstalledVersionCode = 2127
+val minimumInstalledVersionCode = 0
 if (keystorePath.exists()) {
    keystoreProperties.load(FileInputStream(keystorePath))
 }
@@ -25,10 +25,7 @@ android {
    }
 
    defaultConfig {
-       check(flutter.versionCode > minimumInstalledVersionCode) {
-           "versionCode ${flutter.versionCode} must be greater than " +
-               "$minimumInstalledVersionCode to upgrade the accepted Hermes APK"
-       }
+       // New app: no upgrade guard needed (original was 2127, new app starts fresh).
        applicationId = "com.hermesstudio.mobile"
        minSdk = 24
        targetSdk = 36

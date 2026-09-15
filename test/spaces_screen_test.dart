@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/session.dart';
-import 'package:hermes_android/core/screens/spaces_screen.dart';
-import 'package:hermes_android/core/services/chat_space_store.dart';
+import 'package:hermes_studio_mobile/core/models/session.dart';
+import 'package:hermes_studio_mobile/core/screens/spaces_screen.dart';
+import 'package:hermes_studio_mobile/core/services/chat_space_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Session testSession(String id, {double startedAt = 1}) => Session(

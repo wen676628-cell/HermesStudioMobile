@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/gateway_activity.dart';
-import 'package:hermes_android/core/widgets/gateway_activity_card.dart';
+import 'package:hermes_studio_mobile/core/models/gateway_activity.dart';
+import 'package:hermes_studio_mobile/core/widgets/gateway_activity_card.dart';
 
 void main() {
   group('GatewayToolActivity', () {
@@ -43,7 +43,7 @@ void main() {
 
       expect(activity!.phase, GatewayToolActivityPhase.completed);
       expect(activity.detail, 'Found the official activity contract');
-      expect(activity.statusLabel, 'Completed in 420 ms');
+      expect(activity.statusLabel, '用时 420 ms 完成');
     });
 
     test('uses the error as the safe failure summary', () {
@@ -129,7 +129,7 @@ void main() {
 
       expect(find.text('工具活动'), findsOneWidget);
       expect(find.textContaining('Search files'), findsOneWidget);
-      expect(find.text('Working'), findsOneWidget);
+      expect(find.text('工作中'), findsOneWidget);
       expect(find.text('Scanning gateway event handlers'), findsOneWidget);
     });
 
@@ -186,7 +186,7 @@ void main() {
       );
       await tester.pumpAndSettle();
 
-      expect(find.text('Completed in 1.3 s'), findsOneWidget);
+      expect(find.text('用时 1.3 s 完成'), findsOneWidget);
       final detailWidget = tester.widget<Text>(find.text(detail));
       expect(detailWidget.maxLines, isNull);
     });

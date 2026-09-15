@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/screens/chat_screen.dart';
+import 'package:hermes_studio_mobile/core/screens/chat_screen.dart';
 
 void main() {
   test('user bubble foreground passes WCAG AA in light and dark themes', () {

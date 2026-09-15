@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/screens/chat_screen.dart';
-import 'package:hermes_android/core/screens/session_list_screen.dart';
-import 'package:hermes_android/core/screens/workspace_screen.dart';
-import 'package:hermes_android/core/services/android_launch_intent_service.dart';
-import 'package:hermes_android/core/services/android_share_intent_service.dart';
-import 'package:hermes_android/core/services/config_backup_service.dart';
-import 'package:hermes_android/core/services/connection_manager.dart';
-import 'package:hermes_android/core/services/gateway_turn_application_controller.dart';
-import 'package:hermes_android/core/widgets/hermes_shell.dart';
-import 'package:hermes_android/main.dart';
+import 'package:hermes_studio_mobile/core/screens/chat_screen.dart';
+import 'package:hermes_studio_mobile/core/screens/session_list_screen.dart';
+import 'package:hermes_studio_mobile/core/screens/workspace_screen.dart';
+import 'package:hermes_studio_mobile/core/services/android_launch_intent_service.dart';
+import 'package:hermes_studio_mobile/core/services/android_share_intent_service.dart';
+import 'package:hermes_studio_mobile/core/services/config_backup_service.dart';
+import 'package:hermes_studio_mobile/core/services/connection_manager.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_application_controller.dart';
+import 'package:hermes_studio_mobile/core/widgets/hermes_shell.dart';
+import 'package:hermes_studio_mobile/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'support/inert_turn_application_session.dart';

@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/gateway_turn_contract.dart';
-import 'package:hermes_android/core/services/gateway_turn_journal.dart';
-import 'package:hermes_android/core/services/gateway_turn_recovery.dart';
+import 'package:hermes_studio_mobile/core/models/gateway_turn_contract.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_journal.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_recovery.dart';
 
 const _digestA =
     'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';

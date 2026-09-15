@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/connection.dart';
-import 'package:hermes_android/core/models/gateway_turn_contract.dart';
-import 'package:hermes_android/core/services/desktop_gateway_client.dart';
-import 'package:hermes_android/core/services/gateway_turn_journal.dart';
-import 'package:hermes_android/core/services/gateway_turn_recovery.dart';
-import 'package:hermes_android/core/utils/home_turn_signals.dart';
+import 'package:hermes_studio_mobile/core/models/connection.dart';
+import 'package:hermes_studio_mobile/core/models/gateway_turn_contract.dart';
+import 'package:hermes_studio_mobile/core/services/desktop_gateway_client.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_journal.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_recovery.dart';
+import 'package:hermes_studio_mobile/core/utils/home_turn_signals.dart';
 
 import 'support/memory_turn_journal_store.dart';
 

@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/attachment_draft.dart';
-import 'package:hermes_android/core/services/attachment_draft_service.dart';
+import 'package:hermes_studio_mobile/core/models/attachment_draft.dart';
+import 'package:hermes_studio_mobile/core/services/attachment_draft_service.dart';
 import 'package:image/image.dart' as image_lib;
 
 void main() {

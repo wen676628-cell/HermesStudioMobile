@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/hermes_project.dart';
-import 'package:hermes_android/core/services/projects_repository.dart';
-import 'package:hermes_android/core/utils/new_chat_options.dart';
+import 'package:hermes_studio_mobile/core/models/hermes_project.dart';
+import 'package:hermes_studio_mobile/core/services/projects_repository.dart';
+import 'package:hermes_studio_mobile/core/utils/new_chat_options.dart';
 
 final _now = DateTime.utc(2026, 8, 28, 9, 30, 0);
 

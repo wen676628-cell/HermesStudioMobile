@@ -3,15 +3,15 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/gateway_turn_contract.dart';
-import 'package:hermes_android/core/models/attachment_draft.dart';
-import 'package:hermes_android/core/screens/chat_screen.dart';
-import 'package:hermes_android/core/services/attachment_draft_service.dart';
-import 'package:hermes_android/core/services/connection_manager.dart';
-import 'package:hermes_android/core/services/gateway_turn_application_controller.dart';
-import 'package:hermes_android/core/services/gateway_turn_coordinator.dart';
-import 'package:hermes_android/core/services/gateway_turn_recovery.dart';
-import 'package:hermes_android/core/services/ws_client.dart';
+import 'package:hermes_studio_mobile/core/models/gateway_turn_contract.dart';
+import 'package:hermes_studio_mobile/core/models/attachment_draft.dart';
+import 'package:hermes_studio_mobile/core/screens/chat_screen.dart';
+import 'package:hermes_studio_mobile/core/services/attachment_draft_service.dart';
+import 'package:hermes_studio_mobile/core/services/connection_manager.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_application_controller.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_coordinator.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_recovery.dart';
+import 'package:hermes_studio_mobile/core/services/ws_client.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -87,7 +87,7 @@ void main() {
     await _pumpChat(tester, turnSession: session);
 
     await tester.enterText(find.byType(TextField), 'Raw user prompt');
-    await tester.tap(find.byTooltip('Send'));
+    await tester.tap(find.byTooltip('发送'));
     await tester.pumpAndSettle();
 
     expect(session.submitCount, 1);
@@ -138,7 +138,7 @@ void main() {
     await _pumpChat(tester, turnSession: session);
 
     await tester.enterText(find.byType(TextField), 'Fix this prompt');
-    await tester.tap(find.byTooltip('Send'));
+    await tester.tap(find.byTooltip('发送'));
     await tester.pump();
 
     expect(session.submitCount, 1);
@@ -184,7 +184,7 @@ void main() {
         findsOneWidget,
       );
       await tester.enterText(find.byType(TextField), 'Legacy once');
-      await tester.tap(find.byTooltip('Send'));
+      await tester.tap(find.byTooltip('发送'));
       await tester.pumpAndSettle();
 
       expect(legacySubmitCount, 1);
@@ -225,7 +225,7 @@ void main() {
 
       expect(history.messageRequestCount, 1);
       await tester.enterText(find.byType(TextField), 'Finish in background');
-      await tester.tap(find.byTooltip('Send'));
+      await tester.tap(find.byTooltip('发送'));
       await tester.pump();
 
       for (final state in const <AppLifecycleState>[
@@ -356,7 +356,7 @@ void main() {
     );
 
     await tester.enterText(find.byType(TextField), 'Mixed legacy');
-    await tester.tap(find.byTooltip('Send'));
+    await tester.tap(find.byTooltip('发送'));
     await tester.pumpAndSettle();
 
     expect(uploads, <String>['photo.png', 'notes.txt']);

@@ -13,7 +13,7 @@ void main() {
       ).firstMatch(pubspec);
 
       expect(match, isNotNull);
-      expect(match!.group(1), '2.1.1');
+      expect(match!.group(1), '1.0.0');
       expect(int.parse(match.group(2)!), 2141);
       expect(int.parse(match.group(2)!), greaterThan(2131));
       // F-Droid ABI split: packaged arm64 code is base * 10 + ABI code.

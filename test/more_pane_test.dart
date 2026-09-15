@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/widgets/more_pane.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/widgets/more_pane.dart';
 
 Future<void> _pumpPane(
   WidgetTester tester, {
@@ -67,7 +67,7 @@ void main() {
           .firstWhere((candidate) => candidate.id == 'unassigned');
 
       expect(entry.title, '未分配对话');
-      expect(entry.subtitle, contains('not assigned to a Project'));
+      expect(entry.subtitle, contains('未关联到任何项目'));
     });
 
     test('every section has a title and at least one entry', () {
@@ -126,16 +126,14 @@ void main() {
       );
     });
 
-    test('contract-gated organization stays visible with exact reasons', () {
+    test('contract-gated assets stays visible with exact reasons', () {
       final entries = {
         for (final section in buildMoreSections(dashboardReachable: true))
           for (final entry in section.entries) entry.id: entry,
       };
 
-      for (final id in ['assets', 'pin-batch-undo', 'ai-filing']) {
-        expect(entries[id]!.availability, MoreEntryAvailability.unavailable);
-        expect(entries[id]!.unavailableReason, contains('Gateway'));
-      }
+      expect(entries['assets']!.availability, MoreEntryAvailability.unavailable);
+      expect(entries['assets']!.unavailableReason, contains('Gateway'));
     });
 
     test(
@@ -254,7 +252,7 @@ void main() {
         await tester.pumpAndSettle();
 
         expect(
-          find.textContaining('server-authoritative Assets index'),
+          find.textContaining('服务端资源索引'),
           findsOneWidget,
         );
         expect(picked, isEmpty);

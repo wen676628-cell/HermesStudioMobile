@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/gateway_turn_contract.dart';
-import 'package:hermes_android/core/services/gateway_turn_journal.dart';
-import 'package:hermes_android/core/services/gateway_turn_recovery.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/utils/activity_feed.dart';
+import 'package:hermes_studio_mobile/core/models/gateway_turn_contract.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_journal.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_recovery.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/utils/activity_feed.dart';
 
 const _digestA =
     'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
@@ -131,8 +131,8 @@ void main() {
     expect(feed.groups.map((group) => group.title), [
       '需要你',
       '正在运行',
-      失败',
-      完成',
+      '失败',
+      '完成',
     ]);
   });
 

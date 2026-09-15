@@ -66,3 +66,9 @@ flutter:
         - asset: assets/fonts/Cinzel-Variable.ttf
   assets:
     - assets/
+
+# Pin transitive packages that break under Dart 3.13 / Flutter 3.47.4.
+# objective_c 9.6.x references Architecture.arm64e which was removed from
+# dart:io in Dart 3.13 — the upstream project locks 9.4.1.
+dependency_overrides:
+  objective_c: 9.4.1

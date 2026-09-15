@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/screens/chat_screen.dart';
-import 'package:hermes_android/core/services/connection_manager.dart';
-import 'package:hermes_android/core/widgets/voice_composer_controls.dart';
+import 'package:hermes_studio_mobile/core/screens/chat_screen.dart';
+import 'package:hermes_studio_mobile/core/services/connection_manager.dart';
+import 'package:hermes_studio_mobile/core/widgets/voice_composer_controls.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -38,7 +38,7 @@ void main() {
         extentOffset: 12,
       );
 
-      await tester.tap(find.bySemanticsLabel('Start voice input'));
+      await tester.tap(find.bySemanticsLabel('开始语音输入'));
       await tester.pump();
       voice.emitPartial('dict');
       await tester.pump();
@@ -52,7 +52,7 @@ void main() {
       expect(submitCount, 0);
 
       field.controller!.text = '${field.controller!.text}!';
-      await tester.tap(find.byTooltip('Send'));
+      await tester.tap(find.byTooltip('发送'));
       await tester.pumpAndSettle();
 
       expect(submitCount, 1);
@@ -76,7 +76,7 @@ void main() {
       final field = tester.widget<TextField>(find.byType(TextField));
 
       await tester.enterText(find.byType(TextField), 'first');
-      await tester.tap(find.bySemanticsLabel('Start voice input'));
+      await tester.tap(find.bySemanticsLabel('开始语音输入'));
       await tester.pump();
       voice.emitPartial('heard');
       voice.emitError('speech failed');
@@ -85,7 +85,7 @@ void main() {
       expect(field.controller!.text, 'first heard');
       expect(submitCount, 0);
 
-      await tester.tap(find.bySemanticsLabel('Start voice input'));
+      await tester.tap(find.bySemanticsLabel('开始语音输入'));
       await tester.pump();
       voice.emitPartial('again');
       voice.emitStatus('done');
@@ -114,7 +114,7 @@ void main() {
       final field = tester.widget<TextField>(find.byType(TextField));
 
       await tester.enterText(find.byType(TextField), 'Draft');
-      await tester.tap(find.bySemanticsLabel('Start voice input'));
+      await tester.tap(find.bySemanticsLabel('开始语音输入'));
       await tester.pump();
       expect(find.byKey(VoiceComposerIndicator.indicatorKey), findsOneWidget);
 
@@ -153,7 +153,7 @@ void main() {
         text: 'prefix suffix',
         selection: TextSelection(baseOffset: 7, extentOffset: 13),
       );
-      await tester.tap(find.bySemanticsLabel('Start voice input'));
+      await tester.tap(find.bySemanticsLabel('开始语音输入'));
       await tester.pump();
       voice.emitPartial('spoken');
       await tester.pump();
@@ -167,7 +167,7 @@ void main() {
         selection: TextSelection(baseOffset: 1, extentOffset: 4),
       );
       field.controller!.value = snapshot;
-      await tester.tap(find.bySemanticsLabel('Start voice input'));
+      await tester.tap(find.bySemanticsLabel('开始语音输入'));
       await tester.pump();
       voice.emitPartial('replace');
       await tester.pump();
@@ -192,7 +192,7 @@ void main() {
       final semantics = tester.ensureSemantics();
 
       await _pumpChat(tester, voice: voice, textScale: 2);
-      await tester.tap(find.bySemanticsLabel('Start voice input'));
+      await tester.tap(find.bySemanticsLabel('开始语音输入'));
       await tester.pump(const Duration(seconds: 2));
 
       expect(

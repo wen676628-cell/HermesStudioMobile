@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/services/android_share_intent_service.dart';
-import 'package:hermes_android/core/utils/new_chat_options.dart';
-import 'package:hermes_android/core/widgets/share_text_review_sheet.dart';
+import 'package:hermes_studio_mobile/core/services/android_share_intent_service.dart';
+import 'package:hermes_studio_mobile/core/utils/new_chat_options.dart';
+import 'package:hermes_studio_mobile/core/widgets/share_text_review_sheet.dart';
 
 void main() {
   test(

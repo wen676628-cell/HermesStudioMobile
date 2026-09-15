@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/models/gateway_turn_contract.dart';
-import 'package:hermes_android/core/screens/chat_screen.dart';
-import 'package:hermes_android/core/services/connection_manager.dart';
-import 'package:hermes_android/core/services/gateway_turn_application_controller.dart';
-import 'package:hermes_android/core/services/gateway_turn_coordinator.dart';
-import 'package:hermes_android/core/services/gateway_turn_recovery.dart';
-import 'package:hermes_android/core/services/turn_notification_service.dart';
+import 'package:hermes_studio_mobile/core/models/gateway_turn_contract.dart';
+import 'package:hermes_studio_mobile/core/screens/chat_screen.dart';
+import 'package:hermes_studio_mobile/core/services/connection_manager.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_application_controller.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_coordinator.dart';
+import 'package:hermes_studio_mobile/core/services/gateway_turn_recovery.dart';
+import 'package:hermes_studio_mobile/core/services/turn_notification_service.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/widgets/hermes_components.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/widgets/hermes_components.dart';
 
 Future<void> _pump(
   WidgetTester tester,
@@ -71,7 +71,7 @@ void main() {
     testWidgets('announces its visible label exactly once', (tester) async {
       await _pump(tester, const StatusChip(status: HermesStatus.idle));
 
-      expect(tester.getSemantics(find.byType(StatusChip)).label, 'Idle');
+      expect(tester.getSemantics(find.byType(StatusChip)).label, '空闲');
     });
 
     testWidgets('exposes its state to screen readers', (tester) async {
@@ -79,7 +79,7 @@ void main() {
 
       expect(
         tester.getSemantics(find.byType(StatusChip)).label,
-        contains('Failed'),
+        contains('失败'),
       );
     });
   });

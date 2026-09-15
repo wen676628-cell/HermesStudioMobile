@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/theme/hermes_theme.dart';
-import 'package:hermes_android/core/widgets/chat_context_header.dart';
+import 'package:hermes_studio_mobile/core/theme/hermes_theme.dart';
+import 'package:hermes_studio_mobile/core/widgets/chat_context_header.dart';
 
 Future<void> _pump(
   WidgetTester tester, {
@@ -59,7 +59,7 @@ void main() {
   ) async {
     await _pump(tester);
 
-    expect(find.text('Unassigned'), findsOneWidget);
+    expect(find.text('未分配'), findsOneWidget);
   });
 
   testWidgets('exposes offline state accessibly', (tester) async {

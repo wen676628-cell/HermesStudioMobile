@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hermes_android/core/services/connection_manager.dart';
-import 'package:hermes_android/core/services/text_size_preference.dart';
-import 'package:hermes_android/core/widgets/text_size_settings_card.dart';
-import 'package:hermes_android/main.dart';
+import 'package:hermes_studio_mobile/core/services/connection_manager.dart';
+import 'package:hermes_studio_mobile/core/services/text_size_preference.dart';
+import 'package:hermes_studio_mobile/core/widgets/text_size_settings_card.dart';
+import 'package:hermes_studio_mobile/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
