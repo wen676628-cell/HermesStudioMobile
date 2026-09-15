@@ -113,7 +113,7 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(Key('space-menu-${space.id}')));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Rename'));
+    await tester.tap(find.text('重命名'));
     await tester.pumpAndSettle();
     await tester.enterText(
       find.byKey(const Key('rename-space-name')),

@@ -49,10 +49,10 @@ import '../widgets/gateway_insight_card.dart';
 import '../widgets/gateway_sensitive_prompt_dialog.dart';
 import '../widgets/voice_composer_controls.dart';
 
-/// These colors remain identical in light and dark themes. Their 8.15:1
+/// These colors remain identical in light and dark themes. Their 6.09:1
 /// contrast ratio keeps normal user-message text above WCAG AA.
-const hermesUserMessageBubbleBackground = Color(0xFF6366F1);
-const hermesUserMessageForeground = Color(0xFF1C1B1F);
+const hermesUserMessageBubbleBackground = Color(0xFF4F52D0);
+const hermesUserMessageForeground = Color(0xFFFFFFFF);
 
 class _ModelChoice {
   final String provider;
@@ -547,7 +547,7 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
         ..hideCurrentSnackBar()
         ..showSnackBar(
           const SnackBar(
-            content: Text('Read aloud is unavailable on this device'),
+            content: Text('此设备不支持朗读'),
             duration: Duration(seconds: 3),
           ),
         );
@@ -3261,7 +3261,7 @@ class MessageBubble extends StatelessWidget {
               if (onReadAloud != null)
                 _actionTile(
                   sheetContext,
-                  label: 'Read aloud',
+                  label: '朗读',
                   tooltip: '朗读',
                   icon: Icons.volume_up_outlined,
                   onTap: () {

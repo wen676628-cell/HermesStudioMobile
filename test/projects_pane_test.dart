@@ -281,26 +281,26 @@ void main() {
 
     await tester.tap(find.byKey(const Key('project-actions-p1')));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Rename project'));
+    await tester.tap(find.text('重命名项目'));
     await tester.pumpAndSettle();
     await tester.enterText(
       find.byKey(const Key('rename-project-name')),
-      'New name',
+      '新名称',
     );
-    await tester.tap(find.widgetWithText(FilledButton, 'Rename'));
+    await tester.tap(find.widgetWithText(FilledButton, '重命名'));
     await tester.pumpAndSettle();
 
-    expect(find.text('New name'), findsOneWidget);
+    expect(find.text('新名称'), findsOneWidget);
     await tester.tap(find.byKey(const Key('project-actions-p1')));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Archive project'));
+    await tester.tap(find.text('归档项目'));
     await tester.pumpAndSettle();
-    expect(find.text('Archive New name?'), findsOneWidget);
-    await tester.tap(find.widgetWithText(FilledButton, 'Archive'));
+    expect(find.text('归档 新名称？'), findsOneWidget);
+    await tester.tap(find.widgetWithText(FilledButton, '归档'));
     await tester.pumpAndSettle();
 
     expect(repository.current.projects, isEmpty);
-    expect(repository.current.archived.single.name, 'New name');
+    expect(repository.current.archived.single.name, '新名称');
   });
 
   testWidgets('marks the active project', (tester) async {

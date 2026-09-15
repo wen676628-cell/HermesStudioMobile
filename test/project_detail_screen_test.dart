@@ -436,24 +436,24 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    await tester.tap(find.byTooltip('Project actions'));
+    await tester.tap(find.byTooltip('项目操作'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Rename project'));
+    await tester.tap(find.text('重命名项目'));
     await tester.pumpAndSettle();
     await tester.enterText(
       find.byKey(const Key('rename-project-name')),
       'Mobile',
     );
-    await tester.tap(find.widgetWithText(FilledButton, 'Rename'));
+    await tester.tap(find.widgetWithText(FilledButton, '重命名'));
     await tester.pumpAndSettle();
     expect(renamed, ['Mobile']);
     expect(find.text('Mobile'), findsOneWidget);
 
-    await tester.tap(find.byTooltip('Project actions'));
+    await tester.tap(find.byTooltip('项目操作'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('归档项目'));
     await tester.pumpAndSettle();
-    expect(find.text('Archive Mobile?'), findsOneWidget);
+    expect(find.text('归档 Mobile？'), findsOneWidget);
     await tester.tap(find.widgetWithText(FilledButton, '归档'));
     await tester.pumpAndSettle();
     expect(archives, 1);
@@ -475,20 +475,20 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    await tester.tap(find.byTooltip('Project actions'));
+    await tester.tap(find.byTooltip('项目操作'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('删除项目'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Delete Hermes Android?'), findsOneWidget);
-    expect(find.textContaining('Chats will not be deleted'), findsOneWidget);
-    expect(find.textContaining('Unassigned'), findsOneWidget);
+    expect(find.text('删除 Hermes Android？'), findsOneWidget);
+    expect(find.textContaining('对话不会被删除'), findsOneWidget);
+    expect(find.textContaining('未分配'), findsOneWidget);
 
-    await tester.tap(find.text('Cancel'));
+    await tester.tap(find.text('取消'));
     await tester.pumpAndSettle();
     expect(deletions, 0);
 
-    await tester.tap(find.byTooltip('Project actions'));
+    await tester.tap(find.byTooltip('项目操作'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('删除项目'));
     await tester.pumpAndSettle();
@@ -512,7 +512,7 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    await tester.tap(find.byTooltip('Project actions'));
+    await tester.tap(find.byTooltip('项目操作'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('删除项目'));
     await tester.pumpAndSettle();

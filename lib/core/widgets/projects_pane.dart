@@ -158,19 +158,19 @@ class _ProjectsPaneState extends State<ProjectsPane> {
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (dialogContext) => AlertDialog(
-        title: Text('Archive ${project.name}?'),
+        title: Text('归档 ${project.name}？'),
         content: const Text(
-          'The Project will move to Archived. Its chats and files stay intact, '
-          'and you can restore it at any time.',
+          '项目将被归档。对话和文件将保留，'
+          '可随时恢复。',
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(dialogContext, false),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(dialogContext, true),
-            child: const Text('Archive'),
+            child: const Text('归档'),
           ),
         ],
       ),
@@ -596,12 +596,12 @@ class _ProjectCard extends StatelessWidget {
               if (onRename != null)
                 const PopupMenuItem(
                   value: 'rename',
-                  child: Text('Rename project'),
+                  child: Text('重命名项目'),
                 ),
               if (onArchive != null)
                 const PopupMenuItem(
                   value: 'archive',
-                  child: Text('Archive project'),
+                  child: Text('归档项目'),
                 ),
               if (onRestore != null)
                 const PopupMenuItem(
@@ -648,7 +648,7 @@ class _RenameProjectDialogState extends State<_RenameProjectDialog> {
         autofocus: true,
         maxLength: 80,
         textCapitalization: TextCapitalization.sentences,
-        decoration: InputDecoration(labelText: 'Name', errorText: _error),
+        decoration: InputDecoration(labelText: '名称', errorText: _error),
         onChanged: (value) => _draft = value,
         onFieldSubmitted: (_) => _submit(),
       ),
@@ -657,7 +657,7 @@ class _RenameProjectDialogState extends State<_RenameProjectDialog> {
           onPressed: () => Navigator.pop(context),
           child: const Text('Cancel'),
         ),
-        FilledButton(onPressed: _submit, child: const Text('Rename')),
+        FilledButton(onPressed: _submit, child: const Text('重命名')),
       ],
     );
   }
@@ -692,7 +692,7 @@ class _CreateProjectDialogState extends State<_CreateProjectDialog> {
         autofocus: true,
         maxLength: 80,
         textCapitalization: TextCapitalization.sentences,
-        decoration: InputDecoration(labelText: 'Name', errorText: _error),
+        decoration: InputDecoration(labelText: '名称', errorText: _error),
         onChanged: (value) => _draft = value,
         onSubmitted: (_) => _submit(),
       ),

@@ -14,8 +14,8 @@ void main() {
 
     expect(ratio, greaterThanOrEqualTo(4.5));
     // The pair is theme-independent, so the verified ratio applies to both.
-    expect(hermesUserMessageBubbleBackground, const Color(0xFFD4AF37));
-    expect(hermesUserMessageForeground, const Color(0xFF1C1B1F));
+    expect(hermesUserMessageBubbleBackground, const Color(0xFF4F52D0));
+    expect(hermesUserMessageForeground, const Color(0xFFFFFFFF));
   });
 
   testWidgets('message bubble copies its original Markdown content', (
@@ -47,13 +47,13 @@ void main() {
       ),
     );
 
-    expect(find.byTooltip('Copy message'), findsNothing);
+    expect(find.byTooltip('复制消息'), findsNothing);
     expect(find.byKey(const Key('message-bubble')), findsOneWidget);
 
     await tester.longPress(find.byKey(const Key('message-bubble')));
     await tester.pumpAndSettle();
     expect(find.text('Message actions'), findsOneWidget);
-    await tester.tap(find.byTooltip('Copy message'));
+    await tester.tap(find.byTooltip('复制消息'));
     await tester.pump();
 
     final clipboard = await Clipboard.getData(Clipboard.kTextPlain);
@@ -80,11 +80,11 @@ void main() {
       ),
     );
 
-    expect(find.byTooltip('Read aloud'), findsNothing);
+    expect(find.byTooltip('朗读'), findsNothing);
     await tester.longPress(find.byKey(const Key('message-bubble')));
     await tester.pumpAndSettle();
-    expect(find.byTooltip('Read aloud'), findsOneWidget);
-    await tester.tap(find.byTooltip('Read aloud'));
+    expect(find.byTooltip('朗读'), findsOneWidget);
+    await tester.tap(find.byTooltip('朗读'));
     await tester.pump();
     expect(readAloudCalls, 1);
   });
@@ -100,12 +100,12 @@ void main() {
       ),
     );
 
-    expect(find.byTooltip('Copy message'), findsNothing);
-    expect(find.byTooltip('Read aloud'), findsNothing);
+    expect(find.byTooltip('复制消息'), findsNothing);
+    expect(find.byTooltip('朗读'), findsNothing);
     await tester.longPress(find.byKey(const Key('message-bubble')));
     await tester.pumpAndSettle();
-    expect(find.byTooltip('Copy message'), findsOneWidget);
-    expect(find.byTooltip('Read aloud'), findsNothing);
+    expect(find.byTooltip('复制消息'), findsOneWidget);
+    expect(find.byTooltip('朗读'), findsNothing);
   });
 
   testWidgets('message actions wrap and retain semantics at font scale 200%', (
@@ -141,10 +141,10 @@ void main() {
       await tester.longPress(find.byKey(const Key('message-bubble')));
       await tester.pumpAndSettle();
       for (final label in const [
-        'Copy message',
-        'Read aloud',
-        'Edit and resend',
-        'Regenerate response',
+        '复制消息',
+        '朗读',
+        '编辑并重发',
+        '重新生成回复',
       ]) {
         final action = find.bySemanticsLabel(label);
         expect(action, findsOneWidget);

@@ -392,7 +392,7 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen>
               )
             else
               PopupMenuButton<String>(
-                tooltip: 'Project actions',
+                tooltip: '项目操作',
                 onSelected: (action) {
                   switch (action) {
                     case 'rename':

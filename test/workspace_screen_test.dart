@@ -449,11 +449,11 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('Delete me'));
     await tester.pumpAndSettle();
-    await tester.tap(find.byTooltip('Project actions'));
+    await tester.tap(find.byTooltip('项目操作'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Delete project'));
+    await tester.tap(find.text('删除项目'));
     await tester.pumpAndSettle();
-    await tester.tap(find.widgetWithText(TextButton, 'Delete'));
+    await tester.tap(find.widgetWithText(TextButton, '删除'));
     await tester.pumpAndSettle();
 
     expect(deletions, ['p1']);
@@ -982,7 +982,7 @@ void main() {
 
     expect(opened, isEmpty);
     expect(
-      find.textContaining('Needs a reachable Hermes dashboard'),
+      find.textContaining('需要可达的 Hermes Dashboard'),
       findsWidgets,
     );
   });
